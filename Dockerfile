@@ -2,7 +2,7 @@ FROM centos:8
 MAINTAINER kusari-k
 
 RUN sed -i -e "\$afastestmirror=true" /etc/dnf/dnf.conf
-RUN dnf install -y java-11-openjdk && \
+RUN dnf install -y java-1.8.0-openjdk && \
 	dnf update -y && \
 	dnf clean all
 

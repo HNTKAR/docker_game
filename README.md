@@ -15,8 +15,8 @@ cat tmp.service | \
 xargs -I {} cp {} -frp $HOME/.config/systemd/user && \
 cat tmp.service | \
 xargs -I {} systemctl --user enable {}
-podman pod rm -f mail_pod
-systemctl --user restart pod-mail_pod
+podman pod rm -f game_pod
+systemctl --user restart pod-game_pod
 #podman pod rm -f game_pod
 #podman exec -it minecraft bash
 #sudo firewall-cmd --remove-forward-port=port=25565:proto=tcp:toport=5565 --permanent
